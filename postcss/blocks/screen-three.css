@@ -1,0 +1,36 @@
+.screen-three {
+  @mixin container;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  margin-top: 75px;
+}
+
+.screen-three__left {
+  margin-right: 9%;
+}
+
+.screen-three__title {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 75px;
+    height: 7px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    background: url('../img/line.png') 0px 0px no-repeat;
+  }
+}
+.screen-three__right {
+  text-align: left;
+}
+
+.screen-three__btn {
+  @mixin btn;
+  background: linear-gradient(81deg, #0cceca, #00baff);
+  color: #fff;
+
+}
