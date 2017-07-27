@@ -1,18 +1,27 @@
 .screen-three {
   @mixin container;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   margin: 0 auto;
-  margin-top: 75px;
+  margin-top: 147px;
 }
 
 .screen-three__left {
-  margin-right: 9%;
+  margin-right: 5%;
+  flex-basis: 44.6%;
 }
 
 .screen-three__title {
+  padding: 0%;
+  padding-top: 17%;
+  margin: 0% 0%;
   position: relative;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 35px;
+  line-height: 42px;
+  font-weight: 700;
+  color: $text-color;
 
   &::after {
     content: '';
@@ -20,17 +29,98 @@
     height: 7px;
     position: absolute;
     left: 0;
-    top: 30px;
+    top: 13%;
     background: url('../img/line.png') 0px 0px no-repeat;
   }
 }
+
 .screen-three__right {
   text-align: left;
+  flex-grow: 1;
 }
 
 .screen-three__btn {
   @mixin btn;
   background: linear-gradient(81deg, #0cceca, #00baff);
   color: #fff;
+}
+.schema__step-details {
+  margin-top: 11px;
+  margin-left: 5.5%;
+  margin-right: 2%;
+ }
 
+.shema__action {
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $text-color;
+}
+
+.schema__result {
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: italic;
+  font-weight: 300;
+  color: $text-color2;
+}
+
+.schema {
+  margin: 0% 0%;
+  margin-left: 2.6%;
+  padding: 0% 0%;
+  list-style: none;
+}
+
+.schema__step {
+  display: flex;
+  padding: 0% 0%;
+  margin: 0% 0%;
+  position: relative;
+  margin-bottom: 9%;
+
+  &:nth-child(2n)::after {
+    position:absolute;
+    content: '';
+    width: 81px;
+    height: 82px;
+    right: 92%;
+    top: 92%;
+    background: url('../img/arrow.png') 0px 0px no-repeat;
+  }
+
+  &:nth-child(2n+1)::after {
+    position:absolute;
+    content: '';
+    width: 81px;
+    height: 82px;
+    left: 9%;
+    top: 92%;
+    background: url('../img/arrow_right.png') 0px 0px no-repeat;
+  }
+
+  &:last-child::after {
+    width: 0;
+    height: 0;
+    background: none;
+  }
+}
+
+.schema__step-number {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-top: 38px;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  background: linear-gradient(81deg, #0cceca, #00baff) 0px 5px;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 36px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
 }
