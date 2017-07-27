@@ -2,7 +2,7 @@
   width: 320px;
   margin: 0 auto;
 
-  @media (min-width: $mobile-width) {
+  @media (min-width: $mobile-albom-width) {
     width: 520px;
   }
 
@@ -22,7 +22,7 @@
   font-size: 13px;
   line-height: 21px;
   font-weight: 700;
-  color: $text-color;
+  color: $text-color-main;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-radius: 8px;
