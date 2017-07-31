@@ -1,10 +1,11 @@
 $desktop-width: 1170px;
 $tablet-width: 860px;
-$mobile-albom-width: 630px;
+$mobile-albom-width: 550px;
 $text-color-main: #282828;
-
+$text-color-light: #9a9a9a;
 $slogan-color: #06bae1;
-$text-color1: #9a9a9a;
+
+
 $text-color2: #b0b0b0;
 $color-active: #e9f7fc;
 

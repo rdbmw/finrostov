@@ -41,6 +41,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'css'),
+    filename: "[name].js"
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),

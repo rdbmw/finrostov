@@ -1,65 +1,174 @@
 .screen-one {
   @mixin container;
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
-  margin: 0 auto;
-  margin-top: 75px;
+
+  @media (min-width: $mobile-albom-width) {
+    margin-top: 2%;
+  }
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 1.6%;
+  }
 }
 
 .screen-one__left {
-  margin-left: 6.5%;
-  flex-shrink: 1;
+  display: none;
+
+  @media (min-width: $mobile-albom-width) {
+    position: absolute;
+    margin-left: 2%;
+    display: block;
+    flex-basis: 60%;
+
+    & img {
+      width: 115px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    flex-basis: 70%;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 6.5%;
+    flex-basis: auto;
+    flex-shrink: 0;
+  }
 }
 
 .screen-one__right {
-  margin-left: 10.4%;
-  flex-shrink: 1;
   text-align: left;
+
+  @media (min-width: $mobile-albom-width) {
+    margin-left: 5%;
+  }
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 10.4%;
+  }
 }
 
 .screen-one__title {
-  width: 80%;
-  margin-top: 11px;
-  margin-bottom: 0px;
-  padding-bottom: 27px;
   position: relative;
+  margin: 0 0;
+  margin-top: 2%;
+  padding: 0 0;
+  padding-bottom: 27px;
   font-family: MuseoSansCyrl, sans-serif;
-  font-size: 48px;
-  line-height: 52px;
   font-weight: 700;
-  color: $text-color;
+  color: $text-color-main;
+
+  @media (min-width: $mobile-albom-width) {
+    margin-left: 30%;
+    padding-right: 3%;
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    padding-right: 6%;
+    font-size: 44px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 20%;
+    font-size: 48px;
+    line-height: 52px;
+  }
+
 
   &::after {
+    position: absolute;
     content: '';
     width: 75px;
     height: 7px;
-    position: absolute;
-    left: 0;
+    left: 0px;
     bottom: 0px;
     background: url('../img/line.png') 0px 0px no-repeat;
   }
 }
 
+.screen-one__details {
+  margin-top: 5%;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
 .screen-one__slogan {
-  margin-top: 23px;
+  margin-top: 3%;
   font-family: MuseoSansCyrl, sans-serif;
-  font-size: 30px;
-  line-height: 36px;
   font-weight: 700;
   color: $slogan-color;
+
+  @media (min-width: $mobile-albom-width) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 .screen-one__text {
-  width: 75%;
-  margin-top: 7px;
+  margin-top: 1.5%;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 100;
-  color: $text-color1;
+  color: $text-color-light;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 5%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 25%;
+  }
 }
+
 .screen-one__btn {
   @mixin btn;
-  margin-top: 34px;
+
+  @media (min-width: $mobile-albom-width) {
+    margin-top: 3%;
+  }
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 5%;
+  }
 }
