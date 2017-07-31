@@ -6,11 +6,13 @@
   align-items: flex-start;
 }
 .page-header__logo {
+/*
+
   flex-basis: 55%;
 
   @media (min-width: $tablet-width) {
     flex-basis: auto;
-  }
+  }*/
 }
 
 .page-header__title {
@@ -26,8 +28,22 @@
 }
 
 .page-header__img {
-  width: 100%;
-  height: auto;
+  @media (min-width: $mobile-albom-width) {
+    width: 150px;
+    height: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+    height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 310px;
+    height: auto;
+  }
+
+
 }
 
 .page-header__content {
