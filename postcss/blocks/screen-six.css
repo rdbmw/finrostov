@@ -1,0 +1,143 @@
+.screen-six {
+  @mixin container;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 auto;
+  margin-top: 328px;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.screen-six__left {
+  flex-basis: 40%;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.screen-six__right {
+  flex-basis: 31%;
+  text-align: left;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 2%;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.screen-six__schema {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.screen-six__step {
+  margin-bottom:5%;
+  margin-right: 2%;
+  padding: 5%;
+  flex-basis: 37%;
+  box-shadow: 0px 0px 50px 0 rgba(89, 137, 191, 0.4);
+  border-radius: 8px;
+}
+
+.screen-six__step-number {
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 700;
+  color: $slogan-color;
+}
+
+.screen-six__step-details {
+  margin: 5% 0;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: $text-color-main;
+}
+
+.screen-five__btn {
+  @mixin btn;
+  margin-top: 5%;
+  background: linear-gradient(81deg, #0cceca, #00baff);
+  color: #fff;
+  display: none;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.screen-six__title {
+  margin: 0%;
+  margin-top: 0%;
+  padding: 0%;
+  padding-bottom: 30px;
+  position: relative;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-weight: 700;
+  color: $text-color-main;
+
+  @media (min-width: $mobile-albom-width) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+
+  &::after {
+    content: '';
+    width: 75px;
+    height: 7px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: url('../img/line.png') 0px 0px no-repeat;
+  }
+}
+
+.screen-five__btn--bottom {
+  display: inline-block;
+  margin: 0 auto;
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
