@@ -1,0 +1,150 @@
+.reviews {
+  @mixin container;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 87px;
+  position: relative;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+
+  & img {
+    position: absolute;
+    top: -5%;
+    right: 0%;
+    width: 150px;
+
+    @media (min-width: $mobile-albom-width) {
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 240px;
+    }
+
+    @media (min-width: $desktop-width) {
+    }
+
+  }
+}
+
+.reviews__title {
+  margin: 0%;
+  margin-top: 0%;
+  margin-right: 50%;
+  padding: 0%;
+  padding-bottom: 23px;
+  position: relative;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: $text-color-main;
+  flex-basis: 100%;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+
+  &::after {
+    content: '';
+    width: 75px;
+    height: 7px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: url('../img/line.png') 0px 0px no-repeat;
+  }
+}
+
+
+.reviews__slogan {
+  margin-top: 3%;
+  margin-right: 55%;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-weight: 700;
+  color: $slogan-color;
+  font-size: 25px;
+  line-height: 28px;
+}
+
+.reviews__list {
+  margin-top: 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.reviews__item {
+  flex-basis: 28%;
+  padding: 2% 2%;
+  box-shadow: 0px 0px 50px 0 rgba(89, 137, 191, 0.4);
+  border-radius: 8px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 104px;
+    height: 91px;
+    top: -6%;
+    right: 6%;
+    background: url('../img/quotes.svg') 0px 0px no-repeat;
+  }
+}
+
+.reviews__person {
+  padding-top: 13%;
+  padding-left: 31%;
+  position: relative;
+}
+
+.reviews__avatar {
+  position: absolute;
+  top: 35%;
+  left: 26%;
+
+  & img {
+    border-radius: 50%;
+    width: 65px;
+  }
+}
+
+.reviews_name {
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 700;
+  color: $text-color-main;
+}
+
+.reviews__city {
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  font-style: italic;
+  color: $text-color-slave;
+}
+
+.reviews__text {
+  padding: 10% 4%;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: $text-color-main;
+}

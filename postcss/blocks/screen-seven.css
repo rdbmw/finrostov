@@ -1,0 +1,100 @@
+.calculator {
+  @mixin container;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 81px;
+  box-shadow: 0px 0px 50px 0 rgba(89, 137, 191, 0.4);
+  border-radius: 8px;
+  overflow: hidden;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.calculator__title {
+  flex-basis: 100%;
+  padding: 3% 20%;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 33px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  background-color: $slogan-color;
+}
+
+.calculator__form {
+  padding: 0% 5%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.form-group {
+  flex-basis: calc( 100%/2);
+  margin-top: 5%;
+}
+
+.form-group--center {
+  align-self: center;
+}
+
+.form-group label {
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: top;
+}
+
+input[type="text"] {
+  width: 80%;
+  display: block;
+  margin: 10px 0;
+  padding: 12px 12px;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 300;
+  text-align: left;
+  border-radius: 4px;
+  background-color: #ccc;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.calculator__btn  {
+  @mixin btn;
+  padding: 15px 60px;
+  margin: 0 auto;
+}
