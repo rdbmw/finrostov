@@ -20,6 +20,7 @@
 .screen-four__left {
   margin-bottom: 50px;
   flex-basis: 27.7%;
+  background-color: #fff;
   box-shadow: 0px 0px 50px 0 rgba(89, 137, 191, 0.4);
   border-radius: 8px;
   padding: 2% 2%;
@@ -36,6 +37,7 @@
 .screen-four__middle {
   margin-bottom: 50px;
   flex-basis: 27.7%;
+  background-color: #fff;
   box-shadow: 0px 0px 50px 0 rgba(89, 137, 191, 0.4);
   border-radius: 8px;
   padding: 2% 2%;

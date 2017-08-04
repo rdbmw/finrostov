@@ -55,7 +55,7 @@
 }
 
 .page-footer__contacts {
-  margin-top: 4%;
+  margin-top: 40px;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -79,7 +79,7 @@
 }
 
 .page-footer__address {
-  margin-top: 4%;
+  margin-top: 40px;
   margin-left: 4%;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 14px;
@@ -102,7 +102,7 @@
 }
 
 .page-footer__identity {
-  margin-top: 4%;
+  margin-top: 40px;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 12px;
   line-height: 21px;
@@ -124,7 +124,7 @@
 
 .page-footer__policy {
   margin-left: 20%;
-  margin-top: 4%;
+  margin-top: 40px;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 14px;
   line-height: 21px;

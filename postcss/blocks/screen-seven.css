@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   margin: 0 auto;
   margin-top: 81px;
+  background-color: #fff;
   box-shadow: 0px 0px 50px 0 rgba(89, 137, 191, 0.4);
   border-radius: 8px;
   overflow: hidden;
@@ -22,7 +23,7 @@
 
 .calculator__title {
   flex-basis: 100%;
-  padding: 3% 20%;
+  padding: 30px 70px 35px 70px;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 33px;
   line-height: 36px;
@@ -30,11 +31,24 @@
   text-align: center;
   color: #fff;
   background-color: $slogan-color;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 100px 35px 100px;
+
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 30px 180px 35px 180px;
+
+  }
 }
 
 .calculator__form {
-  padding: 0% 5%;
-  padding-bottom: 3%;
+  padding-left: 50px;
+  padding-bottom: 35px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -54,7 +68,7 @@
 
 .form-group {
   flex-basis: calc( 100%/2);
-  margin-top: 5%;
+  margin-top: 28px;
 }
 
 .form-group--center {
