@@ -7,6 +7,10 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   margin: 0px;
+  /* Местоположение фоновой картинки */   background-image: url('../img/waves.png');
+  /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */   background-position: center center;
+  /* Фон не повторяется */   background-repeat: no-repeat;
+  /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/   background-size: cover;
 }
 
 /*img {

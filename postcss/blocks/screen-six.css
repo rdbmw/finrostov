@@ -95,37 +95,37 @@
   &::after {
     position: absolute;
     content: '';
-    width: 81px;
-    height: 81px;
+    width: 17px;
+    height: 71px;
     background: url('../img/arrow_right.png') 0px 0px no-repeat;
   }
 
   &:nth-child(1)::after {
-    left: 93%;
+    left: 102%;
     top: 38%;
     transform: rotate(-90deg);
   }
 
   &:nth-child(2)::after {
-    left: 37%;
-    top: 92%;
+    left: 47%;
+    top: 94%;
   }
 
   &:nth-child(3)::after {
-    left: 40%;
-    top: 92%;
+    left: 48%;
+    top: 94%;
     background: url('../img/arrow.png') 0px 0px no-repeat;
   }
 
   &:nth-child(4)::after {
-    left: -15%;
+    left: -7%;
     top: 40%;
     background: url('../img/arrow.png') 0px 0px no-repeat;
     transform: rotate(90deg);
   }
 
   &:nth-child(5)::after {
-    left: 93%;
+    left: 102%;
     top: 38%;
     transform: rotate(-90deg);
   }

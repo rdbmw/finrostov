@@ -97,4 +97,15 @@ input[type="checkbox"] {
   @mixin btn;
   padding: 15px 60px;
   margin: 0 auto;
+  margin-bottom: 20px;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0px;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
 }

@@ -151,25 +151,25 @@
   &:nth-child(2n)::after {
     position:absolute;
     content: '';
-    width: 81px;
-    height: 82px;
+    width: 17px;
+    height: 71px;
     top: 92%;
-    right: 90%;
+    right: 98%;
     background: url('../img/arrow.png') 0px 0px no-repeat;
-
-    @media (min-width: $desktop-width) {
-      right: 92%;
-    }
   }
 
   &:nth-child(2n+1)::after {
     position:absolute;
     content: '';
-    width: 81px;
-    height: 82px;
-    left: 9%;
+    width: 17px;
+    height: 71px;
+    left: 17%;
     top: 92%;
     background: url('../img/arrow_right.png') 0px 0px no-repeat;
+
+    @media (min-width: $desktop-width) {
+      left: 15%;
+    }
   }
 
   &:last-child::after {

@@ -19,7 +19,7 @@
 
   & img {
     position: absolute;
-    top: -5%;
+    top: 0%;
     right: 0%;
     width: 150px;
 
@@ -27,6 +27,7 @@
     }
 
     @media (min-width: $tablet-width) {
+      top: -5%;
       width: 240px;
     }
 
@@ -39,21 +40,24 @@
 .reviews__title {
   margin: 0%;
   margin-top: 0%;
-  margin-right: 50%;
+  margin-right: 28%;
   padding: 0%;
   padding-bottom: 23px;
   position: relative;
   font-family: MuseoSansCyrl, sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
   color: $text-color-main;
   flex-basis: 100%;
 
   @media (min-width: $mobile-albom-width) {
+    font-size: 32px;
+    line-height: 40px;
   }
 
   @media (min-width: $tablet-width) {
+    margin-right: 50%;
+    font-size: 36px;
+    line-height: 44px;
   }
 
   @media (min-width: $desktop-width) {
@@ -73,34 +77,71 @@
 
 .reviews__slogan {
   margin-top: 3%;
-  margin-right: 55%;
+  margin-right: 0%;
+  margin-bottom: 2%;
   font-family: MuseoSansCyrl, sans-serif;
   font-weight: 700;
   color: $slogan-color;
-  font-size: 25px;
+  font-size: 24px;
   line-height: 28px;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 55%;
+    margin-bottom: 0%;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
 }
 
 .reviews__list {
-  margin-top: 6%;
+  margin-top: 0%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 5%;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
 }
 
 .reviews__item {
+  margin-top: 7%;
   flex-basis: 28%;
   padding: 2% 2%;
   box-shadow: 0px 0px 50px 0 rgba(89, 137, 191, 0.4);
   border-radius: 8px;
   position: relative;
 
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0%;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+
   &::after {
     content: '';
     position: absolute;
     width: 104px;
     height: 91px;
-    top: -6%;
+    top: -5%;
     right: 6%;
     background: url('../img/quotes.svg') 0px 0px no-repeat;
   }

@@ -1,17 +1,135 @@
 .page-footer {
-  background-color: #34333b;
-}
-
-.page-footer__wrapper {
   @mixin container;
-  padding-top: 21px;
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 123px;
+  margin-bottom: 65px;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+
+  & .page-footer__img {
+    width: 150px;
+
+    @media (min-width: $mobile-albom-width) {
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 230px;
+    }
+
+    @media (min-width: $desktop-width) {
+    }
+
+  }
 }
 
-.footer__logo {
-  flex-shrink: 0;
-  width: 202px;
-  height: 50px;
-  margin-left: 0;
-  margin-right: 3%;
+.page-footer__details {
+  margin-left: 10%;
+  flex-basis: 50%;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+  color: $text-color-main;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 3%;
+    flex-basis: 21%;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.page-footer__contacts {
+  margin-top: 4%;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+  color: $text-color-main;
+  & img {
+    padding-right: 5px;
+  }
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 4%;
+    margin-top: 0%;
+
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.page-footer__address {
+  margin-top: 4%;
+  margin-left: 4%;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+  color: $text-color-main;
+
+  & img {
+    padding-right: 5px;
+  }
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0%;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.page-footer__identity {
+  margin-top: 4%;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  font-weight: 300;
+  color: $text-color-main;
+
+  flex-basis: 21%;
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-basis: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.page-footer__policy {
+  margin-left: 20%;
+  margin-top: 4%;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+  color: $text-color-main;
+
+
 }

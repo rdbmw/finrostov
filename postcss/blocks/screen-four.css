@@ -187,8 +187,20 @@
   display: inline-block;
   margin-top: 20px;
   margin-left: 20%;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
+  }
+
+
+  @media (min-width: $mobile-albom-width) {
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0px;
     display: none;
+  }
+
+  @media (min-width: $desktop-width) {
   }
 }
