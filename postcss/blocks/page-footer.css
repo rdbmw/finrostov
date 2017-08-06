@@ -1,62 +1,49 @@
 .page-footer {
   @mixin container;
+  margin-top: 123px;
+  margin-bottom: 65px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 0 auto;
-  margin-top: 123px;
-  margin-bottom: 65px;
 
-  @media (min-width: $mobile-albom-width) {
-  }
-
-  @media (min-width: $tablet-width) {
-  }
-
-  @media (min-width: $desktop-width) {
-  }
 
   & .page-footer__img {
-    width: 150px;
+    width: 307px;
 
     @media (min-width: $mobile-albom-width) {
-    }
-
-    @media (min-width: $tablet-width) {
-      width: 230px;
+      width: 150px;
     }
 
     @media (min-width: $desktop-width) {
+      width: 230px;
     }
-
   }
 }
 
 .page-footer__details {
-  margin-left: 10%;
-  flex-basis: 50%;
-  font-family: MuseoSansCyrl, sans-serif;
+  margin-top: 10px;
+  font-family: Ubuntu, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 300;
   color: $text-color-main;
 
   @media (min-width: $mobile-albom-width) {
+    margin-top: 0px;
+    margin-left: 10%;
+    flex-basis: 50%;
   }
 
   @media (min-width: $tablet-width) {
     margin-left: 3%;
     flex-basis: 21%;
   }
-
-  @media (min-width: $desktop-width) {
-  }
 }
 
 .page-footer__contacts {
-  margin-top: 40px;
-  font-family: MuseoSansCyrl, sans-serif;
+  margin-top: 20px;
+  font-family: Ubuntu, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 300;
@@ -66,22 +53,22 @@
   }
 
   @media (min-width: $mobile-albom-width) {
+    margin-top: 40px;
   }
 
   @media (min-width: $tablet-width) {
-    margin-left: 4%;
+    margin-left: 2%;
     margin-top: 0%;
-
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: 4%;
   }
 }
 
 .page-footer__address {
-  margin-top: 40px;
-  margin-left: 4%;
-  font-family: MuseoSansCyrl, sans-serif;
+  margin-top: 20px;
+  font-family: Ubuntu, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 300;
@@ -90,46 +77,50 @@
   & img {
     padding-right: 5px;
   }
+
   @media (min-width: $mobile-albom-width) {
+    margin-top: 40px;
+    margin-left: 4%;
   }
 
   @media (min-width: $tablet-width) {
     margin-top: 0%;
+    margin-left: 2%;
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: 4%;
   }
 }
 
 .page-footer__identity {
-  margin-top: 40px;
-  font-family: MuseoSansCyrl, sans-serif;
+  margin-top: 20px;
+  font-family: Ubuntu, sans-serif;
   font-size: 12px;
   line-height: 21px;
   font-weight: 300;
   color: $text-color-main;
 
-  flex-basis: 21%;
-
   @media (min-width: $mobile-albom-width) {
+    margin-top: 40px;
+    flex-basis: 21%;
   }
 
   @media (min-width: $tablet-width) {
     flex-basis: auto;
   }
-
-  @media (min-width: $desktop-width) {
-  }
 }
 
 .page-footer__policy {
-  margin-left: 20%;
-  margin-top: 40px;
-  font-family: MuseoSansCyrl, sans-serif;
+  margin-top: 20px;
+  font-family: Ubuntu, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 300;
   color: $text-color-main;
 
-
+  @media (min-width: $mobile-albom-width) {
+    margin-top: 40px;
+    margin-left: 20%;
+  }
 }

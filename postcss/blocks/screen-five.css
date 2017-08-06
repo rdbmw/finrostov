@@ -1,20 +1,13 @@
 .screen-five {
   @mixin container;
+  margin-top: 140px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 0 auto;
-  margin-top: 140px;
-
-  @media (min-width: $mobile-albom-width) {
-  }
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 
@@ -24,9 +17,13 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  & img {
+    display: none;
+  }
 
   @media (min-width: $mobile-albom-width) {
     & img {
+      display: block;
       width: 150px;
       height: auto;
     }
@@ -35,46 +32,40 @@
   @media (min-width: $tablet-width) {
     display: block;
     & img {
-      margin-left: 5%;
+      margin-left: 4.3%;
       width: 213px;
       height: auto;
     }
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 
 .screen-five__title {
   margin: 0%;
   margin-top: 0%;
-  margin-left: 5%;
   padding: 0%;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
   position: relative;
   font-family: MuseoSansCyrl, sans-serif;
-
-  flex-basis: 60%;
-
   font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
   color: $text-color-main;
 
   @media (min-width: $mobile-albom-width) {
+    margin-left: 25px;
+    flex-basis: 60%;
     font-size: 32px;
     line-height: 40px;
   }
 
   @media (min-width: $tablet-width) {
-    margin-top: 5%;
+    margin-top: 25px;
     margin-left: 0%;
     margin-right: 10%;
-    padding-top: 30px;
+    padding-top: 32px;
     padding-bottom: 0px;
     font-size: 35px;
     line-height: 42px;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 
   &::after {
@@ -94,18 +85,12 @@
 
 .screen-five__title--right {
   margin-left: 0%;
-  margin-top: 2%;
-  padding-bottom: 22px;
+  margin-top: 10px;
+  padding-bottom: 25px;
 
   @media (min-width: $mobile-albom-width) {
     font-size: 32px;
     line-height: 40px;
-  }
-
-  @media (min-width: $tablet-width) {
-  }
-
-  @media (min-width: $desktop-width) {
   }
 
   &::after {
@@ -121,24 +106,21 @@
 
 
 .screen-five__details {
-  margin-right: 5%;
-  margin-top: 3%;
+  margin-top: 25px;
+  flex-basis: 100%;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
   color: $text-color-main;
 
-  flex-basis: 100%;
-
   @media (min-width: $mobile-albom-width) {
+    margin-right: 5%;
+    margin-top: 15px;
   }
 
   @media (min-width: $tablet-width) {
     margin-right: 15%;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 
@@ -147,26 +129,20 @@
   flex-grow: 1;
   text-align: left;
 
-  @media (min-width: $mobile-albom-width) {
-  }
-
   @media (min-width: $tablet-width) {
     margin-left: 3%;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 
 
 
 .screen-five__schema {
-  margin-top: 2.5%;
+  margin-top: 17px;
 }
 
 .screen-five__step {
-  padding-bottom: 4.4%;
-  padding-top: 4.4%;
+  padding-bottom: 28px;
+  padding-top: 28px;
   display: flex;
   border-bottom: 1px solid $text-color-slave;
 
@@ -177,14 +153,13 @@
 
 .screen-five__step-number {
   padding-left: 7px;
-  padding-top: 0.5%;
+  padding-top: 5px;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 37px;
   line-height: 42px;
   font-weight: 700;
   color: $text-color-main;
   position: relative;
-
 
   &::before {
     content: '';
@@ -198,7 +173,7 @@
 }
 
 .screen-five__step-details{
-  margin-left: 9%;
+  margin-left: 8.4%;
 }
 
 .screen-five__action {
@@ -219,32 +194,21 @@
 
 .screen-five__btn {
   @mixin btn;
-  margin-top: 5%;
+  margin-top: 21px;
   background: linear-gradient(81deg, #0cceca, #00baff);
   color: #fff;
   display: none;
 
-  @media (min-width: $mobile-albom-width) {
-  }
-
   @media (min-width: $tablet-width) {
     display: inline-block;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 
 .screen-five__btn--bottom {
   display: inline-block;
   margin: 0 auto;
-  @media (min-width: $mobile-albom-width) {
-  }
 
   @media (min-width: $tablet-width) {
     display: none;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }

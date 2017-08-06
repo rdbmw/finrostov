@@ -33,3 +33,10 @@
   font-style: normal;
   font-weight: 900;
 }
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/ubuntu/Ubuntu-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}

@@ -1,18 +1,14 @@
 .page-header {
   @mixin container;
-  display: flex;
   margin-top: 10px;
+  display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-}
-.page-header__logo {
-/*
+  flex-direction: column;
 
-  flex-basis: 55%;
-
-  @media (min-width: $tablet-width) {
-    flex-basis: auto;
-  }*/
+  @media (min-width: $mobile-albom-width) {
+    flex-direction: row;
+  }
 }
 
 .page-header__title {
@@ -20,11 +16,7 @@
 }
 
 .page-header__link {
-  display: none;
-
-  @media (min-width: $mobile-albom-width) {
-    display: block;
-  }
+  display: block;
 }
 
 .page-header__img {
@@ -39,32 +31,29 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 310px;
+    width: 307px;
     height: auto;
   }
-
-
 }
 
 .page-header__content {
+  margin-right:auto;
   display: flex;
-  flex-grow:1;
+  flex-grow: 1;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-right:auto;
 
   @media (min-width: $mobile-albom-width) {
     margin-left: 5%;
   }
 
   @media (min-width: $tablet-width) {
-    margin-left: 0%
+    margin-left: 0%;
   }
 }
 
 .page-header__slogan {
-  margin-top: 1%;
   flex-basis: 100%;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 14px;
@@ -74,46 +63,49 @@
   color: $text-color-main;
 
   @media (min-width: $tablet-width) {
-    flex-basis: 25%;
+    margin-top: 12px;
     margin-left: 5%;
+    flex-basis: 25%;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 20%;
+    margin-left: 21.5%;
   }
 }
 
 .page-header__phone {
-  padding-left: 20px;
-  margin-top: 3%;
+  margin-top: 13px;
+  padding-left: 21px;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 100;
   letter-spacing: 0.02em;
   color: $text-color-main;
-  background: url('../img/phone.png') 0px 3px no-repeat;
+  background: url('../img/phone.png') 0px 2px no-repeat;
 
   @media (min-width: $tablet-width) {
-    margin-top: 2%;
+    margin-top: 18px;
     margin-left: 5%;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 5%;
+    margin-left: 5.5%;
   }
 }
 
 .page-header__callback {
   @mixin btncall;
-  margin-top: 2%;
-  margin-left: 5%;
+  margin-top: 8px;
+  margin-left: auto;
   padding: 5px 10px;
+  font-size: 12px;
 
-  @media (min-width: $tablet-width) {
-    margin-top: 1%;
-    margin-left: auto;
-    padding: 9px 21px;
+  @media (min-width: $mobile-albom-width) {
+    font-size: 13px;
   }
 
+  @media (min-width: $tablet-width) {
+    padding: 9px 21px;
+  }
 }

@@ -1,74 +1,67 @@
 .calculator {
   @mixin container;
+  margin-top: 68px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 auto;
-  margin-top: 81px;
   background-color: #fff;
   box-shadow: 0px 0px 50px 0 rgba(89, 137, 191, 0.4);
   border-radius: 8px;
   overflow: hidden;
-
-  @media (min-width: $mobile-albom-width) {
-  }
-
-  @media (min-width: $tablet-width) {
-  }
-
-  @media (min-width: $desktop-width) {
-  }
 }
 
 .calculator__title {
   flex-basis: 100%;
-  padding: 30px 70px 35px 70px;
+  padding: 30px 20px 35px 20px;
   font-family: MuseoSansCyrl, sans-serif;
-  font-size: 33px;
-  line-height: 36px;
+  font-size: 32px;
+  line-height: 38px;
   font-weight: 700;
   text-align: center;
   color: #fff;
   background-color: $slogan-color;
 
   @media (min-width: $mobile-albom-width) {
+    font-size: 35px;
+    line-height: 42px;
+    padding: 30px 70px 35px 70px;
   }
 
   @media (min-width: $tablet-width) {
     padding: 30px 100px 35px 100px;
-
   }
 
   @media (min-width: $desktop-width) {
-    padding: 30px 180px 35px 180px;
-
+    padding: 29px 215px 29px 214px;
   }
 }
 
 .calculator__form {
-  padding-left: 50px;
-  padding-bottom: 35px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  flex-basis: 100%;
+  padding-left: 15%;
+  padding-bottom: 25px;
 
   @media (min-width: $mobile-albom-width) {
+    padding-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-basis: 100%;
   }
 
   @media (min-width: $tablet-width) {
-    flex-basis: 50%;
+    flex-basis: 60%;
   }
 
   @media (min-width: $desktop-width) {
+    flex-basis: 50%;
   }
 }
 
 .form-group {
   flex-basis: calc( 100%/2);
-  margin-top: 28px;
+  margin-top: 29px;
 }
 
 .form-group--center {
@@ -77,18 +70,19 @@
 
 .form-group label {
   font-family: MuseoSansCyrl, sans-serif;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 21px;
   font-weight: 700;
+  color: $text-color-main;
   text-align: left;
   vertical-align: top;
 }
 
 input[type="text"] {
-  width: 80%;
-  display: block;
   margin: 10px 0;
   padding: 12px 12px;
+  width: 80%;
+  display: block;
   background-image: none;
   border: none;
   box-shadow: none;
@@ -98,7 +92,7 @@ input[type="text"] {
   font-weight: 300;
   text-align: left;
   border-radius: 4px;
-  background-color: #ccc;
+  background-color: $input-color;
   outline: none;
 }
 
@@ -109,17 +103,16 @@ input[type="checkbox"] {
 
 .calculator__btn  {
   @mixin btn;
-  padding: 15px 60px;
   margin: 0 auto;
+  padding: 15px 60px;
   margin-bottom: 20px;
-
-  @media (min-width: $mobile-albom-width) {
-  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0px;
+    padding: 15px 50px;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 15px 60px;
   }
 }
