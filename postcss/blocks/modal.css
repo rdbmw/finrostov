@@ -1,0 +1,257 @@
+.modal-content {
+  position: fixed;
+  top: 20px;
+  left: 5%;
+  width: 90%;
+  background-color: #fff;
+  box-shadow: 0px 0px 50px 0 rgba(89, 137, 191, 0.4);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 51;
+
+  @media (min-width: $mobile-albom-width) {
+    top: 40px;
+    left: 10%;
+    width: 80%;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 60px;
+    left: 20%;
+    width: 60%;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 80px;
+    left: 20%;
+    width: 60%;
+  }
+}
+
+.modal-content__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.modal-content__close:before,
+.modal-content__close:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1px;
+}
+
+.modal-content__close:hover::before,
+.modal-content__close:hover::after {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.modal-content__close:before {
+  transform: rotate(45deg);
+}
+
+.modal-content__close:after {
+  transform: rotate(-45deg);
+}
+
+.modal-content__title {
+  margin: 0;
+  padding: 20px 5%;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background-color: $slogan-color;
+
+  @media (min-width: $mobile-albom-width) {
+    padding: 20px 10%;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 35px;
+    line-height: 42px;
+    padding: 20px 15%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 25%;
+  }
+}
+
+.lead-form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 60%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 40%;
+  }
+}
+
+.lead-form label {
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $text-color-main;
+  text-align: left;
+  vertical-align: top;
+}
+
+.lead-form input[type="text"] {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 12px 12px;
+  width: 100%;
+  display: block;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 300;
+  text-align: left;
+  border-radius: 4px;
+  background-color: $input-color;
+  outline: none;
+
+  @media (min-width: $mobile-albom-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.lead-form p {
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 300;
+  color: $text-color-main;
+  text-align: left;
+  vertical-align: top;
+
+  & a {
+    color: #06bae0;
+  }
+}
+
+.lead-form__btn  {
+  @mixin btn;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 15px 60px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.lead-form__btn--ok {
+  margin-bottom: 50px;
+}
+
+.modal-content__img {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+
+  @media (min-width: $mobile-albom-width) {
+    width: 180px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 15%;
+    display: inline-block;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+    margin-top: 50px;
+    margin-left: 20%;
+  }
+}
+
+.modal-content__ok {
+  margin-top: 20px;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 300;
+  color: $text-color-main;
+  text-align: center;
+  display: block;
+  vertical-align: top;
+
+  @media (min-width: $mobile-albom-width) {
+    margin-top: 50px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 2%;
+    margin-top: 120px;
+    font-size: 22px;
+    line-height: 34px;
+    display: inline-block;
+    text-align: left;
+
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 5%;
+    margin-top: 150px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.hidden {
+  display:none;
+}
