@@ -1,9 +1,9 @@
 .screen-four {
   @mixin container;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: stretch;*/
   margin-top: 200px;
 
   @media (min-width: $mobile-albom-width) {
@@ -11,7 +11,10 @@
   }
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    /*flex-direction: row;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
     margin-top: 300px;
   }
 

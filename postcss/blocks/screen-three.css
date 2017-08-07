@@ -1,13 +1,16 @@
 .screen-three {
   @mixin container;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: flex-start;*/
   margin-top: 147px;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*flex-direction: row;*/
   }
 }
 

@@ -1,14 +1,17 @@
 .contacts {
   @mixin container;
   margin-top: 200px;
-  display: flex;
+  /*display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: column;*/
   position: relative;
 
   @media (min-width: $desktop-width) {
-    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*flex-direction: row;*/
     margin-top: 308px;
   }
 }

@@ -1,10 +1,10 @@
 .screen-two {
   @mixin container;
   margin-top: 200px;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: stretch;*/
 
   @media (min-width: $mobile-albom-width) {
     margin-top: 250px;
@@ -12,7 +12,10 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 350px;
-    flex-direction: row;
+    /*flex-direction: row;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
   }
 
   @media (min-width: $desktop-width) {
