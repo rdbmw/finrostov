@@ -97,6 +97,20 @@
   }
 }
 
+.screen-four__right--mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.screen-four__right--not-mobile {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .screen-four__title {
   padding: 0%;
   padding-right: 5%;

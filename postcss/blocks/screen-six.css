@@ -77,6 +77,20 @@
   }
 }
 
+.screen-six__right--mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.screen-six__right--not-mobile {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .screen-six__schema {
   @media (min-width: $mobile-albom-width) {
     display: flex;

@@ -91,6 +91,20 @@
   }
 }
 
+.contacts__right--mobile {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.contacts__right--not-mobile {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
 .contacts__title {
   margin: 0%;
   margin-top: 0%;

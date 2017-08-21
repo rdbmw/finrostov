@@ -1,6 +1,6 @@
 .modal-content {
   position: fixed;
-  top: 20px;
+  top: 10px;
   left: 5%;
   width: 90%;
   background-color: #fff;
@@ -10,8 +10,6 @@
   z-index: 51;
 
   @media (min-width: $mobile-albom-width) {
-    top: 40px;
-    left: 10%;
     width: 80%;
   }
 
@@ -68,17 +66,17 @@
 
 .modal-content__title {
   margin: 0;
-  padding: 20px 5%;
+  padding: 10px 2%;
+  padding-top: 35px;
   font-family: MuseoSansCyrl, sans-serif;
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 24px;
+  line-height: 26px;
   font-weight: 700;
   color: #fff;
   text-align: center;
   background-color: $slogan-color;
 
   @media (min-width: $mobile-albom-width) {
-    padding: 20px 10%;
   }
 
   @media (min-width: $tablet-width) {
@@ -93,11 +91,12 @@
 }
 
 .lead-form {
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 10px 0;
 
   @media (min-width: $tablet-width) {
+    padding: 20px 0;
     width: 60%;
   }
 
@@ -114,12 +113,26 @@
   color: $text-color-main;
   text-align: left;
   vertical-align: top;
+
+  @media (min-width: $mobile-albom-width) {
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: auto;
+    vertical-align: top;
+  }
 }
 
 .lead-form input[type="text"] {
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 12px 12px;
+  box-sizing: border-box;
   width: 100%;
   display: block;
   background-image: none;
@@ -135,11 +148,14 @@
   outline: none;
 
   @media (min-width: $mobile-albom-width) {
-    margin-bottom: 30px;
+    display: inline-block;
+    width: 55%;
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
@@ -148,6 +164,7 @@
 }
 
 .lead-form p {
+  margin: 0;
   font-family: MuseoSansCyrl, sans-serif;
   font-size: 16px;
   line-height: 21px;
@@ -161,14 +178,26 @@
   }
 }
 
+.modal-content__error {
+  margin: 0;
+  margin-top: 20px;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 300;
+  color: red;
+  text-align: center;
+}
+
 .lead-form__btn  {
   @mixin btn;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 15px 60px;
   display: block;
 
   @media (min-width: $tablet-width) {
+    margin-top: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -182,13 +211,13 @@
 .modal-content__img {
   width: 150px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20px;
   display: block;
 
   @media (min-width: $mobile-albom-width) {
-    width: 180px;
-    margin: 0 auto;
+    display: inline-block;
     margin-top: 30px;
+    margin-left: 10%;
   }
 
   @media (min-width: $tablet-width) {
@@ -217,7 +246,9 @@
   vertical-align: top;
 
   @media (min-width: $mobile-albom-width) {
-    margin-top: 50px;
+    margin-top: 70px;
+    margin-left: 2%;
+    display: inline-block;
   }
 
   @media (min-width: $tablet-width) {
@@ -225,7 +256,6 @@
     margin-top: 120px;
     font-size: 22px;
     line-height: 34px;
-    display: inline-block;
     text-align: left;
 
   }

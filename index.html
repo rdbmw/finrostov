@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Позвони нам сегодня и живи без кредитов завтра! Ваш персональный юрист</title>
 	<link href="css/fonts.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="http://localhost:8050/styles.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:8050/styles.css?v=0.0.17">
 	<script src="http://localhost:35729/livereload.js?snipver=1"></script>
 	<script src="js/jquery.documentReady.js"></script>
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts.js?v=0.0.17"></script>
 </head>
 
 <body>
@@ -45,41 +45,41 @@
 				<h2 class="screen-two__title">Позволь себе не платить по кредитам</h2>
 				<div class="screen-two__slogan">Как это уже сделали многие наши клиенты</div>
 				<div class="slider-cases">
-					<div class="slider-cases__bwd"></div>
+					<!-- <div class="slider-cases__bwd"></div> -->
 					<div class="slider-cases__items">
-						<div class="slider-cases__item slider-cases__item--active">
+						<div class="slider-cases__item slider-cases__item--active" data-trans="0">
 							<img class="slider-cases__avatar" src="img/m1.jpg">
 							<div class="slider-cases__person">
 								<div class="slider-cases__name">Андрей Е.</div>
 								<div class="slider-cases__city">г. Каменск-Шахтинский РО</div>
-								<div class="slider-cases__result">Спасли от коллекторов</div>
+								<div class="slider-cases__result">Уменьшили платеж по кредиту</div>
 							</div>
 						</div>
-						<div class="slider-cases__item">
+						<div class="slider-cases__item" data-trans="1">
 							<img class="slider-cases__avatar" src="img/w1.jpg">
 							<div class="slider-cases__person">
 								<div class="slider-cases__name">Екатерина Ш.</div>
 								<div class="slider-cases__city">г. Ростов-на-Дону</div>
-								<div class="slider-cases__result">Помогли с кредитом</div>
+								<div class="slider-cases__result">Отменили штрафы и снизили ставку</div>
 							</div>
 						</div>
-						<div class="slider-cases__item">
+						<div class="slider-cases__item" data-trans="2">
 							<img class="slider-cases__avatar" src="img/m2.jpg">
 							<div class="slider-cases__person">
-								<div class="slider-cases__name">Григорий К.</div>
-								<div class="slider-cases__city">пос. Чалтырь РО</div>
-								<div class="slider-cases__result">Уменьшили платеж по кредиту</div>
+								<div class="slider-cases__name">Юрий М.</div>
+								<div class="slider-cases__city">г. Ростов-на-Дону</div>
+								<div class="slider-cases__result">Защитили имущество</div>
 							</div>
 						</div>
 					</div>
-					<div class="slider-cases__fwd"></div>
+					<!-- <div class="slider-cases__fwd"></div> -->
 				</div>
 				<div class="btn screen-two__btn">Хочу так же</div>
 			</div>
 			<div class="screen-two__right">
-				<div class="slider-text__bwd"></div>
-				<div class="slider-text__fwd"></div>
-				<div class="slider-text__slides">
+				<div class="slider-text__bwd" id="slider-text__bwd"></div>
+				<div class="slider-text__fwd" id="slider-text__fwd"></div>
+				<div class="slider-text__slides" id="slider">
 					<!-- slide 1 -->
 					<div class="slider-text__slide">
 						<div class="slider-text__title">
@@ -110,7 +110,7 @@
 					<!-- slide 2 -->
 					<div class="slider-text__slide">
 						<div class="slider-text__title">
-							<img class="slider-text__avatar" src="img/m1.jpg">
+							<img class="slider-text__avatar" src="img/w1.jpg">
 							<div class="slider-text__person">
 								<div class="slider-text__name">Екатерина Ш.</div>
 								<div class="slider-text__city">г. Ростов-на-Дону</div>
@@ -119,45 +119,45 @@
 						<div class="slider-text__details">
 							<div class="slider-text__strong">Описание</div>
 							<p class="slider-text__p">
-								Единственный кормилец в семье. На иждивении 3 детей, один из которых – инвалид. Платежи по 3-м кредитам «съедали» 70% дохода. Платить вовремя не было возможности, появились просрочки. Банк стал безакцептно (без распоряжения владельца) списывать с зарплатной карты 100% средств. Андрей с семьей остался без средств к существованию.
+								Заключила потребительский кредит на приобретение мебели, но в связи с ухудшением состояния здоровья и временной нетрудоспособностью, не смогла полностью оплачивать ежемесячный платеж. Началось начисление штрафов и пеней, которые постоянно увеличивали сумму долга по кредиту. Постоянные звонки с угрозами выбили её из равновесия и добавили проблем со здоровьем.
 							</p>
 							<div class="slider-text__result">
 								<div class="slider-text__strong">Результат:</div>
 								<ol class="slider-text__steps">
-									<li class="slider-text_step">Специалисты остановили списание денежных средств с зарплатной карты.</li>
-									<li class="slider-text_step">Приняты законные меры, благодаря которым 85% заработанных средств остаются в семье.</li>
-									<li class="slider-text_step">Остановлено начисление процентов, аннулированы штрафы и пени за просрочку, в результате чего зафиксирована сумма к выплате – 244 313 руб. вместо 327 192 руб. </li>
+									<li class="slider-text_step">Исключено моральное давление на клиентку, т.к. звонки из служб взыскания банка были переведены на юристов.</li>
+									<li class="slider-text_step">Проведена досудебная претензионная работа с приложением копий медицинских документов, в результате которой банком был предложен график платежей, абсолютно устроивший клиентку.</li>
+									<li class="slider-text_step">Штрафные санкции полностью отменены, пересмотрены сроки погашения кредита, снижена процентная ставка и, как следствие, сумма ежемесячного платежа.</li>
 								</ol>
 							</div>
 							<div class="slider-text__summary">
-								Андрей спокойно погашает фиксированную сумму в размере 15% от своей заработной платы.
+								Ежемесячные расходы на погашения кредита уменьшились вдвое. Экономия составила  118 920 руб.
 							</div>
 						</div>
 					</div>
 					<!-- slide 3 -->
 					<div class="slider-text__slide">
 						<div class="slider-text__title">
-							<img class="slider-text__avatar" src="img/m1.jpg">
+							<img class="slider-text__avatar" src="img/m2.jpg">
 							<div class="slider-text__person">
-								<div class="slider-text__name">Григорий К.</div>
-								<div class="slider-text__city">пос. Чалтырь РО</div>
+								<div class="slider-text__name">Юрий М.</div>
+								<div class="slider-text__city">г. Ростов-на-Дону</div>
 							</div>
 						</div>
 						<div class="slider-text__details">
 							<div class="slider-text__strong">Описание</div>
 							<p class="slider-text__p">
-								Единственный кормилец в семье. На иждивении 3 детей, один из которых – инвалид. Платежи по 3-м кредитам «съедали» 70% дохода. Платить вовремя не было возможности, появились просрочки. Банк стал безакцептно (без распоряжения владельца) списывать с зарплатной карты 100% средств. Андрей с семьей остался без средств к существованию.
+								В 2015 г. взял кредит для сына. Через некоторое время у банка была отозвана лицензия. «Достучаться» до банка и понять, куда совершать платежи, не стало возможным.  Платеж по кредиту «ушел в никуда». Возникли просрочки, появился страх за свое имущество.
 							</p>
 							<div class="slider-text__result">
 								<div class="slider-text__strong">Результат:</div>
 								<ol class="slider-text__steps">
-									<li class="slider-text_step">Специалисты остановили списание денежных средств с зарплатной карты.</li>
-									<li class="slider-text_step">Приняты законные меры, благодаря которым 85% заработанных средств остаются в семье.</li>
-									<li class="slider-text_step">Остановлено начисление процентов, аннулированы штрафы и пени за просрочку, в результате чего зафиксирована сумма к выплате – 244 313 руб. вместо 327 192 руб. </li>
+									<li class="slider-text_step">Имущество защищено от ареста и последующего изъятия.</li>
+									<li class="slider-text_step">Найден правопреемник банка, с которым проведена работа по уменьшению долга.</li>
+									<li class="slider-text_step">3. Ситуация стала понятной, Юрий освобожден от морального груза.</li>
 								</ol>
 							</div>
 							<div class="slider-text__summary">
-								Андрей спокойно погашает фиксированную сумму в размере 15% от своей заработной платы.
+								Остановлено начисление процентов, экономия средств составила 1 200 000 руб.
 							</div>
 						</div>
 					</div>
@@ -176,13 +176,18 @@
 					<div class="schema__step"><div class="schema__step-number">1</div><div class="schema__step-details"><div class="shema__action">Уменьшим платеж по кредиту</div><div class="schema__result">финансовое облегчение уже после первой консультации</div></div></div>
 					<div class="schema__step"><div class="schema__step-number">2</div><div class="schema__step-details"><div class="shema__action">Прекратим произвол коллекторов</div><div class="schema__result">вернем тебе спокойный сон и душевный комфорт</div></div></div>
 					<div class="schema__step"><div class="schema__step-number">3</div><div class="schema__step-details"><div class="shema__action">Остановим начисление штрафов и пеней </div><div class="schema__result">сумма твоего долга снизится и перестанет расти</div></div></div>
-					<div class="schema__step"><div class="schema__step-number">4</div><div class="schema__step-details"><div class="shema__action">Спишем долг на законных основаниях</div><div class="schema__result">при обращении в ООО “Юрист” твоя кредитная история останется безупречной</div></div></div>
+					<div class="schema__step"><div class="schema__step-number">4</div><div class="schema__step-details"><div class="shema__action">Спишем долг на законных основаниях</div><div class="schema__result">при обращении в компанию “Ваш Персональный Юрист” твоя кредитная история останется безупречной</div></div></div>
 					<div class="schema__step"><div class="schema__step-number">5</div><div class="schema__step-details"><div class="shema__action">Защитим Ваше имущество</div><div class="schema__result">не дадим арестовать или продать за бесценок квартиру, машину, бытовую технику и др.</div></div></div>
 				</div>
 			</div>
 		</section>
 		<!-- ЭКРАН № 4 -->
 		<section class="screen-four">
+			<div class="screen-four__right screen-four__right--mobile">
+				<img src="img/illustration3.png" alt="">
+				<div class="screen-four__title screen-four__title--right">Защитим твое имущество, даже если дело уже в суде</div>
+				<div class="btn screen-four__btn">Защитить имущество</div>
+			</div>
 			<div class="screen-four__left">
 				<div class="screen-four__title">Какое имущество ты защитишь с нашей помощью?</div>
 				<ul class="screen-four__list">
@@ -209,7 +214,7 @@
 				</ul>
 				<div class="btn screen-four__btn screen-four__btn--bottom">Защитить имущество</div>
 			</div>
-			<div class="screen-four__right">
+			<div class="screen-four__right screen-four__right--not-mobile">
 				<img src="img/illustration3.png" alt="">
 				<div class="screen-four__title screen-four__title--right">Защитим твое имущество, даже если дело уже в суде</div>
 				<div class="btn screen-four__btn">Защитить имущество</div>
@@ -237,6 +242,12 @@
 		</section>
 		<!-- ЭКРАН № 6 -->
 		<section class="screen-six">
+			<div class="screen-six__right screen-six__right--mobile">
+				<h2 class="screen-six__title">Хочешь избавиться от кредитов раз и навсегда?</h2>
+				<div class="screen-six__slogan">Действуй!</div>
+				<div class="btn screen-six__btn">Получить консультацию</div>
+				<img src="img/illustration5.png" alt="">
+			</div>
 			<div class="screen-six__left">
 				<div class="screen-six__schema">
 					<div class="screen-six__step"><div class="screen-six__step-number">Шаг 1</div><div class="screen-six__step-details">Приходи к нам в офис как можно скорее— чем раньше, тем меньше платить.</div></div>
@@ -248,7 +259,7 @@
 				</div>
 				<div class="btn screen-six__btn screen-six__btn--bottom">Получить консультацию</div>
 			</div>
-			<div class="screen-six__right">
+			<div class="screen-six__right screen-six__right--not-mobile">
 				<h2 class="screen-six__title">Хочешь избавиться от кредитов раз и навсегда?</h2>
 				<div class="screen-six__slogan">Действуй!</div>
 				<div class="btn screen-six__btn">Получить консультацию</div>
@@ -281,41 +292,65 @@
 	<!-- ЭКРАН № 8 -->
 	<section class="reviews">
 		<div class="reviews__title">Еще вчера им угрожали судом и продажей имущества</div>
-		<div class="reviews__slogan">И вот что они говорят о компании «Юрист» сегодня</div>
+		<div class="reviews__slogan">И вот что они говорят о компании «Ваш Персональный Юрист» сегодня</div>
 		<img src="img/illustration6.png" alt="" class="reviews_ill">
 		<div class="reviews__list">
 			<div class="reviews__item">
 				<div class="reviews__person">
 					<div class="reviews__avatar"><img src="img/w1.jpg"></div>
-					<div class="reviews_name">Светлана</div>
-					<div class="reviews__city">г. Москва</div>
+					<div class="reviews_name">Ольга Х.</div>
+					<div class="reviews__city">х. В.Кадамовка</div>
 				</div>
-				<div class="reviews__text">Мне постоянно названивали коллекторы и угрожали. Они даже звонили родственникам! Я не знала что делать и друзья посоветовали обратиться в эту компанию. После обращения в ФинЮрист звонки прекратились! Мы выиграли суд с банком и я теперь спокойна. Большое человеческое СПАСИБО!</div>
+				<div class="reviews__text">
+					Специалисты компании взяли общение со службой взыскания банков и микрофинасовых организаций на себя и оградили меня от их постоянных звонков и угроз.
+					Объяснили, как лучше действовать в моей сложной ситуации. В настоящее время ведется работа по улучшению моего положения, как заемщика, уменьшению долга.
+					Предпринимаются меры, которые дадут мне возможность остановить рост долга и расплачиваться с банком и микрофинансовой организацией по моим возможностям. <br><br>
+					Я очень благодарна компании «Ваш Персональный Юрист», что делают такое благое дело!
+				</div>
 			</div>
 			<div class="reviews__item">
 				<div class="reviews__person">
 					<div class="reviews__avatar"><img src="img/m1.jpg"></div>
-					<div class="reviews_name">Александр</div>
-					<div class="reviews__city">г. Ростов-на-Дону</div>
+					<div class="reviews_name">Николай Т.</div>
+					<div class="reviews__city">г. Миллерово</div>
 				</div>
-				<div class="reviews__text">Я долго решался обращаться ли за помощью в ФинЮрист — переживал что не смогу платить за услуги. Но после обращения, я сразу же перестал платить ежемесячный платеж банкам и плата за услуги была гораздо меньше моих платежей! Мне перестали звонить, вернули комиссию и списали штрафы.</div>
+				<div class="reviews__text">
+					Я был вынужден обратиться за юридической помощью, т.к. понимал, что самостоятельно мне с этой проблемой не справиться.
+					Первое, что сделали сотрудники компании «Ваш Персональный Юрист» - это объяснили мне мои права, рассказали, как реагировать на давление банка и как уберечь имущество.
+					Одновременно велась работа по расторжению «грабительского» кредитного договора и снижению процентной ставки.
+					В результате, благодаря грамотным и своевременным действиям сотрудников юридической компании прекратились угрозы и давление на меня со стороны банка.
+					Имущество сохранено. Прекращены начисления процентов, в связи с чем экономия средств составила 550 000 рублей!
+					В настоящее время в суде расторгается кредитный договор. <br><br>
+					Я рекомендую обращаться в данную компанию за качественной правовой помощью.
+				</div>
 			</div>
 			<div class="reviews__item">
 				<div class="reviews__person">
 					<div class="reviews__avatar"><img src="img/m2.jpg"></div>
-					<div class="reviews_name">Юрий</div>
-					<div class="reviews__city">г. Санкт-Петербург</div>
+					<div class="reviews_name">Юрий М.</div>
+					<div class="reviews__city">г. Ростов-на-Дону</div>
 				</div>
-				<div class="reviews__text">До обращения в ФинЮрист у меня были проблемы с оплатой кредита, мне постоянно звонили, угрожали. Я пытался рассчитаться с банком, но долг как ни странно только увеличивался. После обращения к специалистам компании, банк остался мне должен! Спасибо вам!</div>
+				<div class="reviews__text">
+					Благодаря грамотным и слаженным действиям юристов, во-первых, был найдет правопреемник банка, в котором я взял кредит, и получены реквизиты, по которым я мог погашать кредит, и быть уверенным, что мои деньги доходят до получателя платежа и долг уменьшается. Во-вторых, благодаря усилиям сотрудников юридической компании банк вышел в суд и было остановлено начисление процентов.
+					Об этом я даже не мечтал! Юристы сэкономили мне 1 200 000 рублей, которые я должен был платить по процентам.
+					И самое главное – сохранено моё имущество, мои деньги и было восстановлено моё душевное равновесие.<br><br>
+					Я рекомендую обращаться в компанию «Ваш Персональный Юрист» всем попавшим в подобную жизненную ситуацию.
+				</div>
 			</div>
 		</div>
 	</section>
 	<!-- ЭКРАН № 9 -->
 	<section class="contacts">
+		<div class="contacts__right contacts__right--mobile">
+			<div class="contacts__title">У тебя нестандартная ситуация?</div>
+			<div class="contacts__slogan">Нужна срочная юридическая помощь по кредитам?</div>
+			<div class="contacts_details">Опытный юрист на связи и готов взяться за твое дело сегодня</div>
+			<div class="btn contacts__btn">Заказать обратный звонок</div>
+		</div>
 		<div class="contacts__left">
 			<div class="contacts__address">
 				<p class="contacts__address-title">Наш адрес</p>
-				<p class="contacts__address-text"><img src="img/pickpoint.png" alt="">г. Ростов-на-Дону, ул. Тельмана, 153 </p>
+				<p class="contacts__address-text"><img src="img/pickpoint.png" alt="">г. Ростов-на-Дону, ул. Тельмана, 128 </p>
 				<p class="contacts__address-title">Наш телефон</p>
 				<p class="contacts__address-text"><img src="img/phone.png" alt="">+7 (928) 102-99-89</p>
 				<p class="contacts__address-title">Наша почта</p>
@@ -325,24 +360,23 @@
 				<img src="img/map.jpg"  />
 			</div>
 		</div>
-		<div class="contacts__right">
+		<div class="contacts__right contacts__right--not-mobile">
 			<div class="contacts__title">У тебя нестандартная ситуация?</div>
 			<div class="contacts__slogan">Нужна срочная юридическая помощь по кредитам?</div>
 			<div class="contacts_details">Опытный юрист на связи и готов взяться за твое дело сегодня</div>
 			<div class="btn contacts__btn">Заказать обратный звонок</div>
-
 		</div>
 	</section>
 	</main>
 	<footer class="page-footer">
 		<img src="img/logo1.png" alt="Ваш Персональный Юрист" class="page-footer__img">
-		<div class="page-footer__details">Расторжение кредитных договоров. Антиколлекторское агентство по Ростову-на-Дону и области</div>
+		<div class="page-footer__details">Помощь при проблемах с кредитами. Антиколлекторское агентство по Ростову-на-Дону и области</div>
 		<div class="page-footer__contacts">
 			<div class="page-footer__phone"><img src="img/phone.png" alt=""> +7(928)229-06-82</div>
 			<div class="page-footer__mail"><img src="img/mail.png" alt=""> contact@финростов.рф</div>
 		</div>
-		<div class="page-footer__address"><img src="img/pickpoint.png" alt=""> г. Ростов-на-Дону, ул. Тельмана 153</div>
-		<div class="page-footer__identity">ООО "Тайм". ОГРН 1156196051494 ИНН 6163141707</div>
+		<div class="page-footer__address"><img src="img/pickpoint.png" alt=""> г. Ростов-на-Дону, ул. Тельмана 128</div>
+		<div class="page-footer__identity">ООО "Юрист". ОГРН 1176196000925 ИНН 6195000498</div>
 		<a href="#" class="page-footer__policy">Политика конфиденциальности</a>
 	</footer>
 	<div class="modal-content hidden">
@@ -350,7 +384,7 @@
 		<h2 class="modal-content__title">Оставьте нам заявку и мы решим Вашу проблему</h2>
 		<h2 class="modal-content__title modal-content__title--ok hidden">Спасибо за Ваше доверие!</h2>
 		<div class="modal-content__details">
-			<form class="lead-form">
+			<form class="lead-form" id="leadForm">
 				<div class="lead-form__group">
 					<label for="name" class="">Ваше имя</label>
 					<input type="text" id="name">
@@ -360,6 +394,7 @@
 					<input type="text" id="phone">
 				</div>
 				<p>Отправляя данные через форму заявки, вы принимаете <a href="">политику конфиденциальности</a></p>
+				<div class="modal-content__error" id="error"></div>
 				<button class="lead-form__btn" type="submit">РЕШИТЬ ПРОБЛЕМУ</button>
 			</form>
 		</div>
@@ -369,6 +404,35 @@
 		</div>
 	</div>
 	<div class="modal-overlay hidden"></div>
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter45566046 = new Ya.Metrika({
+                    id:45566046,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/45566046" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>
