@@ -271,15 +271,19 @@
 		<div class="calculator__title">Узнай, сколько денег ты сэкономишь уже в этом месяце</div>
 		<form class="calculator__form">
 			<div class="form-group">
-				<label for="creditsum" class="">Общая сумма долга, руб.</label>
-				<input type="text" id="creditsum">
+				<label for="creditAmount" class="">Остаток долга по кредитам, руб.</label>
+				<input type="text" id="creditAmount">
 			</div>
 			<div class="form-group">
-				<label for="creditpayment" class="">Ежемесячный платеж, руб.</label>
-				<input type="text" id="creditpayment">
+				<label for="monthCount" class="">Оставшийся срок в месяцах, мес.</label>
+				<input type="text" id="monthCount">
 			</div>
 			<div class="form-group">
-				<label for="salary" class="">Официальная зарплата, руб.</label>
+				<label for="monthPayment" class="">Платеж в месяц по всем кредитам, руб.</label>
+				<input type="text" id="monthPayment">
+			</div>
+			<div class="form-group">
+				<label for="salary" class="">Официальная (белая) заплата, руб.</label>
 				<input type="text" id="salary">
 			</div>
 			<div class="form-group form-group--center">
@@ -287,7 +291,10 @@
 				<label for="kids" class="">Есть иждевенцы</label>
 			</div>
 		</form>
-		<button type="submit" class="btn calculator__btn">РЕШИТЬ ПРОБЛЕМУ</div>
+		<div class="calculator__btn-block">
+			<div id="calculator__error"></div>
+			<button type="submit" class="btn calculator__btn">СДЕЛАТЬ РАСЧЕТ</div>
+		</div>
 	</section>
 	<!-- ЭКРАН № 8 -->
 	<section class="reviews">
@@ -383,8 +390,21 @@
 		<button class="modal-content__close" type="button" title="Закрыть">Закрыть</button>
 		<h2 class="modal-content__title">Оставьте нам заявку и мы решим Вашу проблему</h2>
 		<h2 class="modal-content__title modal-content__title--ok hidden">Спасибо за Ваше доверие!</h2>
-		<div class="modal-content__details">
+		<div class="modal-content__scroll">
+		<div class="modal-content__details modal-content__details--flex">
+			<div class="modal-content__calc hidden">
+				<p class="calc__header">Ваша переплата сейчас</p>
+				<p class="calc__title">Суммарная эффективная ставка:</p>
+				<p class="calc__result" id="calcRate"></p>
+				<p class="calc__header">Ваша выгода от работы с нами:</p>
+				<p class="calc__title">Экономия на выплате процентов:</p>
+				<p "calc__result" id="calcPercent"></p>
+				<p class="calc__title">Максимальный платеж в месяц:</p>
+				<p "calc__result" id="calcPayment"></p>
+				<p class="calc__info">Результат расчета является приблизительным, для точной оценки необходима консультация сотрудника компании</p>
+			</div>
 			<form class="lead-form" id="leadForm">
+				<input type="hidden" id="leadComment">
 				<div class="lead-form__group">
 					<label for="name" class="">Ваше имя</label>
 					<input type="text" id="name">
@@ -402,7 +422,9 @@
 			<img src="img/illustration7.png" alt=""  class="modal-content__img"><div class="modal-content__ok">Мы свяжемся с Вами<br>в ближайшее время</div>
 			<button class="lead-form__btn lead-form__btn--ok" type="submit">ОТЛИЧНО</button>
 		</div>
+		</div>
 	</div>
+
 	<div class="modal-overlay hidden"></div>
 	<!-- Yandex.Metrika counter -->
 <script type="text/javascript" >

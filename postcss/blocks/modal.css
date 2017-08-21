@@ -3,10 +3,10 @@
   top: 10px;
   left: 5%;
   width: 90%;
+  overflow: hidden;
   background-color: #fff;
   box-shadow: 0px 0px 50px 0 rgba(89, 137, 191, 0.4);
   border-radius: 8px;
-  overflow: hidden;
   z-index: 51;
 
   @media (min-width: $mobile-albom-width) {
@@ -14,13 +14,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    top: 60px;
+    top: 20px;
     left: 20%;
     width: 60%;
   }
 
   @media (min-width: $desktop-width) {
-    top: 80px;
+    top: 60px;
     left: 20%;
     width: 60%;
   }
@@ -90,17 +90,88 @@
   }
 }
 
+.modal-content__scroll {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+
+.modal-content__details--flex {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.modal-content__calc {
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+
+  @media (min-width: $mobile-albom-width) {
+    margin-left: 3%;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 40%;
+  }
+}
+
+.modal-content__calc p {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 300;
+  color: $text-color-main;
+  text-align: left;
+  vertical-align: top;
+
+  & a {
+    color: #06bae0;
+  }
+}
+
+.modal-content__calc .calc__header {
+  flex-basis: 100%;
+  margin-top: 25px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #06bae1;
+}
+
+.modal-content__calc .calc__info {
+  flex-basis: 100%;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.modal-content__calc .calc__title {
+  flex-basis: 60%;
+  font-weight: 700;
+}
+
+.modal-content__calc .calc__result {
+  flex-basis: 40%;
+}
+
 .lead-form {
   width: 95%;
   margin: 0 auto;
   padding: 10px 0;
 
-  @media (min-width: $tablet-width) {
-    padding: 20px 0;
-    width: 60%;
-  }
-
   @media (min-width: $desktop-width) {
+    padding: 20px 0;
     width: 40%;
   }
 }
@@ -121,7 +192,7 @@
     padding-right: 10px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     display: block;
     width: auto;
     vertical-align: top;
@@ -153,13 +224,14 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
-    display: block;
-    width: 100%;
+
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 50px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -198,9 +270,6 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 30px;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 

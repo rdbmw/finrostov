@@ -1,3 +1,55 @@
+function funcF(x, credit, payment, months) {
+  var summ = -credit;
+  for (var i = 1; i <= months; i++) {
+    summ = summ + Math.pow(x, i) * payment;
+  }
+  return summ;
+}
+
+function funcFDiff(x, payment, months) {
+  var summ = payment;
+  for (var i = 1; i < months; i++) {
+    summ = summ + Math.pow(x, i) * payment * (i + 1);
+  }
+  return summ;
+}
+
+function calcRate(credit, payment, months) {
+  var fault = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0.0001;
+
+  var koeff = 1;
+  var ratePrev = 0;
+
+  koeff = koeff - funcF(koeff, credit, payment, months) / funcFDiff(koeff, payment, months);
+  var rateNext = Math.pow(koeff, -12) - 1;
+  //console.log(koeff, " - ", rateNext, " - ", Math.abs(rateNext - ratePrev));
+
+  while (Math.abs(rateNext - ratePrev) > fault) {
+    ratePrev = rateNext;
+    koeff = koeff - funcF(koeff, credit, payment, months) / funcFDiff(koeff, payment, months);
+    rateNext = Math.pow(koeff, -12) - 1;
+    //console.log(koeff, " - ", rateNext, " - ", Math.abs(rateNext - ratePrev));
+  }
+
+  return rateNext;
+}
+
+function formatVal(val) {
+      var valParts = val.toFixed(2).split('.');
+      var intPart = valParts[0];
+      var str_temp = '';
+      if (intPart.length > 3) {
+        var intArr = intPart.split('');
+        for (var i = intArr.length - 1, j = 1; i >= 0; i--, j++) {
+          str_temp = intArr[i] + str_temp;
+          if (j % 3 == 0) str_temp = " " + str_temp;
+        }
+      } else {
+        str_temp = intPart;
+      }
+      return str_temp.replace(/-\s/g, '-') + "," + valParts[1]; //дополнительно убираем пробел при "-"
+    }
+
 $(function() {
 
   // переключение слайдера
@@ -79,6 +131,7 @@ $(function() {
   // кнопки заявки
 
   var btns = document.getElementsByClassName("btn");
+
   var modal = document.getElementsByClassName("modal-content")[0];
   var modalTitles = document.getElementsByClassName("modal-content__title");
   var modalDetails = document.getElementsByClassName("modal-content__details");
@@ -90,16 +143,54 @@ $(function() {
   var modalClose = document.getElementsByClassName("modal-content__close")[0];
   var modalSend = document.getElementsByClassName("lead-form__btn")[0];
   var modalOk = document.getElementsByClassName("lead-form__btn--ok")[0];
+  var leadComment = document.getElementById("leadComment");
+  var calc = document.querySelector(".calculator__form");
+  var btnCalc = document.querySelector(".calculator__btn");
+  var modalCalc = document.querySelector(".modal-content__calc");
 
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function(event) {
-      yaCounter45566046.reachGoal('ClickButton');
       event.preventDefault();
-      modal.classList.toggle("hidden");
-      overlay.classList.toggle("hidden");
-      header.classList.toggle("blur");
-      content.classList.toggle("blur");
-      footer.classList.toggle("blur");
+
+      if (this.classList.contains("calculator__btn")) {
+        // Расчет калькулятор
+        if (calc.elements.creditAmount.value == "" || calc.elements.monthCount.value == "" || calc.elements.monthPayment.value == "" || calc.elements.salary.value == "") {
+            document.getElementById("calculator__error").innerHTML = "Заполните все поля!";
+        } else {
+          document.getElementById("calculator__error").innerHTML = "";
+          var creditAmount = +calc.elements.creditAmount.value;
+          var monthPayment = +calc.elements.monthPayment.value;
+          var monthCount = +calc.elements.monthCount.value;
+          var salary = +calc.elements.salary.value;
+
+          var rate = calcRate(creditAmount, monthPayment, monthCount);
+            console.log (rate);
+          var saving = (monthCount - 3 + 36) * rate * creditAmount / 12;
+          console.log (saving);
+          var maxPayment = calc.elements.kids.checked  ? salary * 0.25 : salary * 0.5;
+          console.log (maxPayment);
+          document.getElementById("calcRate").innerHTML = formatVal(rate*100) + "%";
+          document.getElementById("calcPercent").innerHTML = formatVal(saving) + " руб.";
+          document.getElementById("calcPayment").innerHTML = formatVal(maxPayment) + " руб.";
+          modalCalc.classList.remove("hidden");
+          yaCounter45566046.reachGoal('ClickButton');
+          modal.classList.toggle("hidden");
+          overlay.classList.toggle("hidden");
+          header.classList.toggle("blur");
+          content.classList.toggle("blur");
+          footer.classList.toggle("blur");
+          leadComment.value = "кнопка '" + this.textContent +"'";
+        }
+      } else {
+        yaCounter45566046.reachGoal('ClickButton');
+        yaCounter45566046.reachGoal('CalcButton');
+        modal.classList.toggle("hidden");
+        overlay.classList.toggle("hidden");
+        header.classList.toggle("blur");
+        content.classList.toggle("blur");
+        footer.classList.toggle("blur");
+        leadComment.value = "кнопка '" + this.textContent +"'";
+      }
     });
   }
 
@@ -167,8 +258,7 @@ $(function() {
         }
       }
       xmlhttp.send(JSON.stringify({
-        'name': document.getElementById("name").value, 'phone': document.getElementById("phone").value,
-        // 'comment': form.getElementById("com").value
+        'name': document.getElementById("name").value, 'phone': document.getElementById("phone").value, 'comment': document.getElementById("leadComment").value
       }));
     }
   });
