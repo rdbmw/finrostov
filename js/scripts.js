@@ -234,6 +234,7 @@ $(function() {
     if (document.getElementById("name").value == "" || document.getElementById("phone").value == "") {
       document.getElementById("error").innerHTML = "Заполните имя и телефон!";
     } else {
+      document.getElementById("submitbtn").classList.toggle("lead-form__btn--loading");
       yaCounter45566046.reachGoal('Lead');
       var xmlhttp = (window.XMLHttpRequest)
         ? new XMLHttpRequest()
@@ -255,6 +256,7 @@ $(function() {
           } else {
             document.getElementById("error").innerHTML = "Ошибка!<br>" + xmlhttp.responseText;
           }
+          document.getElementById("submitbtn").classList.toggle("lead-form__btn--loading");
         }
       }
       xmlhttp.send(JSON.stringify({

@@ -250,6 +250,10 @@
   }
 }
 
+.lead-form .lead-advice {
+  margin-bottom: 20px;
+}
+
 .modal-content__error {
   margin: 0;
   margin-top: 20px;
@@ -267,10 +271,28 @@
   margin-top: 10px;
   padding: 15px 60px;
   display: block;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     margin-top: 30px;
   }
+}
+
+@keyframes turn360 {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.lead-form__btn--loading::after {
+  content: '';
+  position: absolute;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-left: 2px solid transparent;
+  border-radius: 50%;
+  animation: turn360  1s infinite linear;
 }
 
 .lead-form__btn--ok {
