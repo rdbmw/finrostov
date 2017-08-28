@@ -95,6 +95,9 @@
     margin-top: 32px;
   }
 }
+.btn-wrapper {
+  height: 20px;
+}
 
 .slider-cases__bwd, .slider-cases__fwd {
   width: 12px;
@@ -279,7 +282,7 @@
 }
 
 .slider-text__slides {
-  width: 300%;
+  width: 900%;
   flex-shrink: 0;
   display:flex;
   transition: transform 0.8s ease;
