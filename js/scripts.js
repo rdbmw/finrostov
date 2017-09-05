@@ -181,7 +181,6 @@ $(function() {
   var modal = document.getElementsByClassName("modal-content")[0];
   var modalTitles = document.getElementsByClassName("modal-content__title");
   var modalDetails = document.getElementsByClassName("modal-content__details");
-  var modal = document.getElementsByClassName("modal-content")[0];
   var overlay = document.getElementsByClassName("modal-overlay")[0];
   var header = document.getElementsByClassName("page-header")[0];
   var content = document.getElementsByClassName("page-content")[0];
@@ -219,7 +218,7 @@ $(function() {
           document.getElementById("calcPercent").innerHTML = formatVal(saving) + " руб.";
           document.getElementById("calcPayment").innerHTML = formatVal(maxPayment) + " руб.";
           modalCalc.classList.remove("hidden");
-          yaCounter45566046.reachGoal('ClickButton');
+          yaCounter45566046.reachGoal('CalcButton');
           modal.classList.toggle("hidden");
           overlay.classList.toggle("hidden");
           header.classList.toggle("blur");
@@ -228,8 +227,8 @@ $(function() {
           leadComment.value = "кнопка '" + this.textContent +"'";
         }
       } else {
-        // yaCounter45566046.reachGoal('ClickButton');
-        yaCounter45566046.reachGoal('CalcButton');
+        yaCounter45566046.reachGoal('ClickButton');
+        // yaCounter45566046.reachGoal('CalcButton');
         modal.classList.toggle("hidden");
         overlay.classList.toggle("hidden");
         header.classList.toggle("blur");
@@ -310,4 +309,47 @@ $(function() {
       }));
     }
   });
+
+  // кнопки отзывов
+  var reviewsBtns = document.getElementsByClassName("reviews__more");
+  var modalReviews = document.getElementsByClassName("reviews-full");
+  var modalReviewsClose = document.getElementsByClassName("reviews-full__close");
+  var modalOk = document.getElementsByClassName("reviews-full__btn");
+
+
+  for (var i = 0; i < reviewsBtns.length; i++) {
+    reviewsBtns[i].addEventListener("click", function(event) {
+      event.preventDefault();
+      yaCounter45566046.reachGoal('ReviewButton');
+      modalReviews[this.dataset.reviewid].classList.toggle("hidden");
+      overlay.classList.toggle("hidden");
+      header.classList.toggle("blur");
+      content.classList.toggle("blur");
+      footer.classList.toggle("blur");
+    });
+  }
+
+  for (var i = 0; i < modalReviewsClose.length; i++) {
+    modalReviewsClose[i].addEventListener("click", function(event) {
+      event.preventDefault();
+      modalReviews[this.dataset.reviewid].classList.toggle("hidden");
+      overlay.classList.toggle("hidden");
+      header.classList.toggle("blur");
+      content.classList.toggle("blur");
+      footer.classList.toggle("blur");
+    });
+  }
+
+  for (var i = 0; i < modalOk.length; i++) {
+    modalOk[i].addEventListener("click", function(event) {
+      event.preventDefault();
+      modalReviews[this.dataset.reviewid].classList.toggle("hidden");
+      overlay.classList.toggle("hidden");
+      header.classList.toggle("blur");
+      content.classList.toggle("blur");
+      footer.classList.toggle("blur");
+    });
+  }
+
+
 });
