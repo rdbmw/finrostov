@@ -39,6 +39,36 @@
 				</div>
 			</div>
 		</section>
+		<!-- ЭКРАН № 7 -->
+	<section class="calculator">
+		<div class="calculator__title">Узнай, сколько денег ты сэкономишь уже в этом месяце</div>
+		<form class="calculator__form">
+			<div class="form-group">
+				<label for="creditAmount" class="">Остаток долга по кредитам, руб.</label>
+				<input type="text" id="creditAmount">
+			</div>
+			<div class="form-group">
+				<label for="monthCount" class="">Оставшийся срок в месяцах, мес.</label>
+				<input type="text" id="monthCount">
+			</div>
+			<div class="form-group">
+				<label for="monthPayment" class="">Платеж в месяц по всем кредитам, руб.</label>
+				<input type="text" id="monthPayment">
+			</div>
+			<div class="form-group">
+				<label for="salary" class="">Официальная (белая) заплата, руб.</label>
+				<input type="text" id="salary">
+			</div>
+			<div class="form-group form-group--center">
+				<input type="checkbox" id="kids">
+				<label for="kids" class="">Есть иждевенцы</label>
+			</div>
+		</form>
+		<div class="calculator__btn-block">
+			<div id="calculator__error"></div>
+			<button type="submit" class="btn calculator__btn">СДЕЛАТЬ РАСЧЕТ</div>
+		</div>
+	</section>
 		<!-- ЭКРАН № 2 -->
 		<section class="screen-two">
 			<div class="screen-two__left">
@@ -478,36 +508,7 @@
 				<img src="img/illustration5.png" alt="">
 			</div>
 		</section>
-		<!-- ЭКРАН № 7 -->
-	<section class="calculator">
-		<div class="calculator__title">Узнай, сколько денег ты сэкономишь уже в этом месяце</div>
-		<form class="calculator__form">
-			<div class="form-group">
-				<label for="creditAmount" class="">Остаток долга по кредитам, руб.</label>
-				<input type="text" id="creditAmount">
-			</div>
-			<div class="form-group">
-				<label for="monthCount" class="">Оставшийся срок в месяцах, мес.</label>
-				<input type="text" id="monthCount">
-			</div>
-			<div class="form-group">
-				<label for="monthPayment" class="">Платеж в месяц по всем кредитам, руб.</label>
-				<input type="text" id="monthPayment">
-			</div>
-			<div class="form-group">
-				<label for="salary" class="">Официальная (белая) заплата, руб.</label>
-				<input type="text" id="salary">
-			</div>
-			<div class="form-group form-group--center">
-				<input type="checkbox" id="kids">
-				<label for="kids" class="">Есть иждевенцы</label>
-			</div>
-		</form>
-		<div class="calculator__btn-block">
-			<div id="calculator__error"></div>
-			<button type="submit" class="btn calculator__btn">СДЕЛАТЬ РАСЧЕТ</div>
-		</div>
-	</section>
+
 	<!-- ЭКРАН № 8 -->
 	<section class="reviews">
 		<div class="reviews__title">Еще вчера им угрожали судом и продажей имущества</div>
@@ -596,15 +597,18 @@
 		<div class="modal-content__scroll">
 		<div class="modal-content__details modal-content__details--flex">
 			<div class="modal-content__calc hidden">
-				<p class="calc__header">Ваша переплата сейчас</p>
+				<p class="calc__header">Ваша переплата в процентах сейчас</p>
 				<p class="calc__title">Суммарная эффективная ставка:</p>
 				<p class="calc__result" id="calcRate"></p>
-				<p class="calc__header">Ваша выгода от работы с нами:</p>
+				<p class="calc__header" >Ваша выгода от работы с нами:</p>
 				<p class="calc__title">Экономия на выплате процентов:</p>
-				<p "calc__result" id="calcPercent"></p>
+				<p class="calc__result" style="color: red;">Передано на расчет юристу</p>
+				<p class="calc__result hidden" id="calcPercent"></p>
 				<p class="calc__title">Максимальный платеж в месяц:</p>
-				<p "calc__result" id="calcPayment"></p>
-				<p class="calc__info">Результат расчета является приблизительным, для точной оценки необходима консультация сотрудника компании</p>
+				<p class="calc__result" style="color: red;">Передано на расчет юристу</p>
+				<p class="calc__result hidden" id="calcPayment"></p>
+				<!-- <p class="calc__info">Результат расчета является приблизительным, для точной оценки необходима консультация сотрудника компании</p> -->
+				<p class="calc__info" style="color: red; font-size: 16px;">Оставьте контактные данные и мы сообщим вам результаты расчета.</p>
 			</div>
 			<form class="lead-form" id="leadForm">
 				<p class="lead-advice">Позвоните нам по телефону <a href="tel:+79281029210">+7 (928) 102-92-10</a> (Viber, WhatsApp) или оставьте свои контактные данные:</p>

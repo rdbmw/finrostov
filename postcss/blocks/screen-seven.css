@@ -1,6 +1,7 @@
 .calculator {
   @mixin container;
-  margin-top: 68px;
+  /*margin-top: 68px;*/
+  margin-top: 268px;
   display: flex;
   justify-content: flex-start;
   align-items: center;

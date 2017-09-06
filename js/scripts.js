@@ -209,11 +209,11 @@ $(function() {
           var salary = +calc.elements.salary.value;
 
           var rate = calcRate(creditAmount, monthPayment, monthCount);
-            console.log (rate);
+          // console.log (rate);
           var saving = (monthCount - 3 + 36) * rate * creditAmount / 12;
-          console.log (saving);
+          // console.log (saving);
           var maxPayment = calc.elements.kids.checked  ? salary * 0.25 : salary * 0.5;
-          console.log (maxPayment);
+          // console.log (maxPayment);
           document.getElementById("calcRate").innerHTML = formatVal(rate*100) + "%";
           document.getElementById("calcPercent").innerHTML = formatVal(saving) + " руб.";
           document.getElementById("calcPayment").innerHTML = formatVal(maxPayment) + " руб.";
@@ -304,9 +304,30 @@ $(function() {
           document.getElementById("submitbtn").classList.toggle("lead-form__btn--loading");
         }
       }
-      xmlhttp.send(JSON.stringify({
-        'name': document.getElementById("name").value, 'phone': document.getElementById("phone").value, 'comment': document.getElementById("leadComment").value
-      }));
+      var reqjson = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        comment: document.getElementById("leadComment").value,
+        inputs: {},
+        outputs: {}
+      };
+
+      if (!document.querySelector(".modal-content__calc").classList.contains("hidden")) {
+        reqjson.inputs = {
+          creditAmount: formatVal(+calc.elements.creditAmount.value),
+          monthPayment: formatVal(+calc.elements.monthPayment.value),
+          monthCount:  formatVal(+calc.elements.monthCount.value),
+          salary: formatVal(+calc.elements.salary.value),
+          kids: calc.elements.kids.checked  ? "да" : "нет"
+        };
+        reqjson.outputs = {
+          calcRate: document.getElementById("calcRate").textContent ,
+          calcPercent: document.getElementById("calcPercent").textContent ,
+          calcPayment: document.getElementById("calcPayment").textContent ,
+        };
+        console.log(reqjson);
+      }
+      xmlhttp.send(JSON.stringify(reqjson));
     }
   });
 
