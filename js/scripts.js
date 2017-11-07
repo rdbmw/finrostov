@@ -193,14 +193,18 @@ $(function() {
   var btnCalc = document.querySelector(".calculator__btn");
   var modalCalc = document.querySelector(".modal-content__calc");
 
+  function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+  }
+
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function(event) {
       event.preventDefault();
 
       if (this.classList.contains("calculator__btn")) {
         // Расчет калькулятор
-        if (calc.elements.creditAmount.value == "" || calc.elements.monthCount.value == "" || calc.elements.monthPayment.value == "" || calc.elements.salary.value == "") {
-            document.getElementById("calculator__error").innerHTML = "Заполните все поля!";
+        if (!isNumeric(calc.elements.creditAmount.value) || !isNumeric(calc.elements.monthCount.value) || !isNumeric(calc.elements.monthPayment.value) || !isNumeric(calc.elements.salary.value)) {
+            document.getElementById("calculator__error").innerHTML = "Ошибка заполнения! Укажите во всех полях числовые значения!";
         } else {
           document.getElementById("calculator__error").innerHTML = "";
           var creditAmount = +calc.elements.creditAmount.value;
@@ -281,6 +285,7 @@ $(function() {
     } else {
       document.getElementById("submitbtn").classList.toggle("lead-form__btn--loading");
       yaCounter45566046.reachGoal('Lead');
+      ga('send', 'event', 'cat1', 'order');
       var xmlhttp = (window.XMLHttpRequest)
         ? new XMLHttpRequest()
         : new ActiveXObject("Microsoft.XMLHTTP");

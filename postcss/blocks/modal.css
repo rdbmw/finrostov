@@ -91,7 +91,7 @@
 }
 
 .modal-content__scroll {
-  max-height: 90vh;
+  max-height: calc(100vh - 200px);
   overflow-y: auto;
 }
 

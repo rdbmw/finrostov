@@ -105,6 +105,15 @@
 
 .calculator__btn-block {
   margin: 0 auto;
+  padding-left: 15%;
+  flex-basis: 100%;
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 30%;
+    padding-left: 0;
+    text-align: left;
+  }
 }
 
 .calculator__btn  {
@@ -124,12 +133,12 @@
 }
 
 #calculator__error {
-    margin: 0;
+    margin-right: 10%;
     margin-bottom: 20px;
     font-family: MuseoSansCyrl, sans-serif;
     font-size: 16px;
     line-height: 21px;
     font-weight: 300;
     color: red;
-    text-align: center;
+    /*text-align: center;*/
 }
